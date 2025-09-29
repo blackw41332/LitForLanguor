@@ -2,6 +2,6 @@
 
 Welcome to my story collection. Choose a category below:
 
-- [Murder](stories/murder.md)
-- [Short Stories](stories/short-stories.md)
-- [Poems](stories/poems.md)
+- [Poems](/poems/)
+- [Short Stories](/short-stories/)
+- [Stories](/stories/)
