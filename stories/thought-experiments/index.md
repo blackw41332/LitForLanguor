@@ -1,7 +1,7 @@
 ---
 title: Thought Experiments
 layout: default
-folder: /murder/
+folder: /thought-experiments/
 ---
 
 # Thought Experiments
