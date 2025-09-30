@@ -1,7 +1,3 @@
----
-title: Stories
-layout: default
----
 # Stories
 
 Choose a subcategory:
