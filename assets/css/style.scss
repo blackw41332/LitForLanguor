@@ -7,11 +7,12 @@ body {
   background-color: #f0f8ff;
 }
 
-/* 2) bold + enlarge the intro paragraph */
-/* This targets the very first <p> inside the Markdown container. */
-.markdown-body p:first-of-type {
-  font-size: 1.5rem;
-  font-weight: bold;
+/* 2) any other overrides… */
+
+/* 3) bold + enlarge that intro line */
+article.markdown-body > :nth-child(2) {
+  font-size: 1.5rem !important;
+  font-weight: bold !important;
   line-height: 1.4;
   margin: 0.5em 0 1.5em;
 }
