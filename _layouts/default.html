@@ -3,37 +3,33 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>{{ page.title }} | {{ site.title }}</title>
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 
-  <style>
-  /* Global story list styling */
-  ul.story-list {
-    list-style-type: none;
-    padding-left: 0;
-    margin-top: 1em;
-  }
-  ul.story-list li {
-    margin: 0.4em 0;
-  }
-  ul.story-list a {
-    text-decoration: none;
-    color: #2c3e50;
-    font-weight: 500;
-    font-family: Georgia, serif;
-  }
-  ul.story-list a:hover {
-    color: #e74c3c;
-    text-decoration: underline;
-  }
-  </style>
+  <title>{{ page.title }} | {{ site.title | default: 'Lit for Languor' }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
   <header class="site-header">
-    <h1><a href="{{ '/' | relative_url }}">{{ site.title | default: 'Lit for Languor' }}</a></h1>
+    <div class="container">
+      <h1><a href="{{ '/' | relative_url }}">{{ site.title | default: 'Lit for Languor' }}</a></h1>
+      <nav class="site-nav">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/stories/' | relative_url }}">Stories</a>
+        <a href="{{ '/poems/' | relative_url }}">Poems</a>
+        <a href="{{ '/short-stories/' | relative_url }}">Short Stories</a>
+      </nav>
+    </div>
   </header>
+
   <main class="content">
-    {{ content }}
+    <div class="container">
+      {{ content }}
+    </div>
   </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; {{ site.time | date: "%Y" }} {{ site.title | default: "Lit for Languor" }}</small>
+    </div>
+  </footer>
 </body>
 </html>
