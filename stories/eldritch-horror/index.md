@@ -1,8 +1,21 @@
+---
+title: Eldritch Horror
+layout: default
+---
+
 # Eldritch Horror Stories
 
-<ul class="list">
-{% assign files = site.static_files | where_exp: "f", "f.path contains '/stories/Eldritch Horror/'" %}
+Welcome to the Eldritch Horror collection. Choose a story below:
+
+<ul class="story-list">
+{% assign files = site.static_files 
+   | where_exp: "f", "f.path contains '/stories/eldritch-horror/' and f.extname == '.docx'" 
+   | sort: "name" %}
 {% for f in files %}
-  <li><a href="{{ f.path | relative_url }}">{{ f.name }}</a></li>
+  {% assign base  = f.name | split: '.' | first %}
+  {% assign pretty = base 
+     | replace: '_s', "'s" 
+     | replace: '_', ' ' %}
+  <li><a href="{{ f.path | relative_url }}">{{ pretty }}</a></li>
 {% endfor %}
 </ul>
