@@ -2,6 +2,6 @@
 
 Choose a subcategory:
 
-- [Philosophical](poems/philosophical/)
-- [Nature](poems/nature/)
-- [Imaginative](poems/imaginative/)
+- [Philosophical](philosophical/)
+- [Nature](nature/)
+- [Imaginative](imaginative/)
