@@ -14,9 +14,10 @@ Welcome to the Murder collection. Choose a story below:
 {% for f in files %}
   {% unless f.name == 'index.md' %}
     {% assign pretty = f.name 
-       | remove: '.docx' 
-       | replace: '_s', \"'s\" 
-       | replace: '_', ' ' %}
+   | remove: '.docx' 
+   | replace: '_s', "'s" 
+   | replace: '_', ' ' %}
+
     <li><a href="{{ f.path | relative_url }}">{{ pretty }}</a></li>
   {% endunless %}
 {% endfor %}
