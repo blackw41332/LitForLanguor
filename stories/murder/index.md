@@ -12,10 +12,11 @@ Welcome to the Murder collection. Choose a story below:
    | where_exp: "f", "f.path contains '/stories/murder/' and f.extname == '.docx'" 
    | sort: "name" %}
 {% for f in files %}
-  {% assign pretty = f.name 
-     | remove: '.docx' 
+  {% assign base  = f.name | split: '.' | first %}
+  {% assign pretty = base 
      | replace: '_s', "'s" 
      | replace: '_', ' ' %}
   <li><a href="{{ f.path | relative_url }}">{{ pretty }}</a></li>
 {% endfor %}
 </ul>
+
