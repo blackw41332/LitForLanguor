@@ -13,4 +13,5 @@ layout: default
   {% endunless %}
 {% endfor %}
 </ul>
+{% assign files = site.static_files | where_exp: "f", "f.path contains '/stories/murder/' and f.extname == '.docx'" %}
 
