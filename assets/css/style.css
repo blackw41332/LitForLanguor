@@ -2,24 +2,21 @@
 1. Color palette
 --------------------------------------------------------------*/
 :root {
-  --text:     #2c3e50;
-  --muted:    #5f6f7a;
-  --accent:   #e74c3c;
-  --bg:       #ffffff;
-  --border:   #eaecef;
+  --text: #2c3e50;
+  --muted: #5f6f7a;
+  --accent: #e74c3c;
+  --bg: #f0f8ff;       /* updated to super–light blue */
+  --border: #eaecef;
 }
 
 /*--------------------------------------------------------------
 2. Base resets
 --------------------------------------------------------------*/
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
   background-color: var(--bg);
@@ -108,3 +105,12 @@ a:hover {
   font-weight: 500;
 }
 
+/*--------------------------------------------------------------
+9. Intro paragraph styling
+--------------------------------------------------------------*/
+.intro {
+  font-size: 1.5rem;      /* larger welcome text */
+  line-height: 1.4;
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+}
