@@ -14,7 +14,7 @@ Welcome to the Short Stories collection. Choose a story below:
 {% for f in files %}
   {% assign base  = f.name | split: "." | first %}
   {% assign pretty = base 
-     | replace: "_s", "'s" 
+     | replace: "_s", "''s" 
      | replace: "_", " " %}
   <li><a href="{{ f.path | relative_url }}">{{ pretty }}</a></li>
 {% endfor %}
