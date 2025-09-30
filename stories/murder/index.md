@@ -22,23 +22,3 @@ Welcome to the Murder collection. Choose a story below:
 {% endfor %}
 </ul>
 
-<style>
-.story-list {
-  list-style-type: none;
-  padding-left: 0;
-  margin-top: 1em;
-}
-.story-list li {
-  margin: 0.4em 0;
-}
-.story-list a {
-  text-decoration: none;
-  color: #2c3e50;
-  font-weight: 500;
-  font-family: Georgia, serif;
-}
-.story-list a:hover {
-  color: #e74c3c;
-  text-decoration: underline;
-}
-</style>
