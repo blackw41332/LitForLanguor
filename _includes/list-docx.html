@@ -1,1 +1,10 @@
+<ul class="story-list">
+{% for f in site.static_files %}
+  {% if f.path contains include.folder and f.extname == '.docx' %}
+    {% assign base   = f.name | split: "." | first %}
+    {% assign pretty = base | replace: "_s", "’s" | replace: "_", " " %}
+    <li><a href="{{ f.path | relative_url }}">{{ pretty }}</a></li>
+  {% endif %}
+{% endfor %}
+</ul>
 
