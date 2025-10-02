@@ -75,6 +75,27 @@ a:hover {
   padding: 16px 0;
 }
 
+/*--------------------------------------------------------------
+5b. Header layout – align title, nav & toggle
+--------------------------------------------------------------*/
+.site-header .container {
+  display: flex;
+  align-items: center;    /* vertically center h1, nav & button */
+}
+
+.site-header h1 {
+  margin: 0;              /* remove that 8px bottom margin */
+}
+
+.theme-toggle {
+  margin-left: auto;      /* push the button to the right edge */
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+
 .site-header h1 {
   margin: 0 0 8px;
   font-size: 24px;
