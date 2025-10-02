@@ -126,3 +126,25 @@ blockquote {
   padding-left: 1em;
   border-left: 3px solid var(--accent);
 }
+
+/*--------------------------------------------------------------
+11. Blurb styling
+--------------------------------------------------------------*/
+.blurb {
+  font-size: 1.2em;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+  display: block;
+  position: relative;
+  padding-bottom: 0.75em;
+}
+
+.blurb::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background-color: var(--border);
+  margin-top: 0.5em;
+}
+
