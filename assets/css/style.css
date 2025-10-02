@@ -142,9 +142,8 @@ blockquote {
 .blurb::after {
   content: "";
   display: block;
-  width: 100px;                     /* longer line */
+  width: 140px;                      /* longer line */
   height: 2px;
-  background-color: var(--text);    /* darker color (same as body text) */
+  background-color: #444;            /* dark grey */
   margin-top: 0.5em;
 }
-
