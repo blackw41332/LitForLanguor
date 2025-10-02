@@ -1,18 +1,19 @@
----
-layout: default
-title: Reading of the Day
-permalink: /reading-of-the-day/
----
+<h2>Reading of the Day</h2>
+<div id="daily-reading"></div>
 
-<section id="daily-reading" class="daily-reading">
-  <h1>Reading of the Day</h1>
-  <div id="daily-content">Loading…</div>
-  <p>
-    <a id="daily-link"
-       href="#"
-       target="_blank"
-       rel="noopener">
-      Continue reading…
-    </a>
-  </p>
-</section>
+<script>
+  var readings = [
+    {% assign docs = site.static_files | where: "extname", ".docx" %}
+    {% for f in docs %}
+      "{{ f.path | relative_url }}"{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ];
+  var choice = readings[Math.floor(Math.random() * readings.length)];
+  if (choice) {
+    document.getElementById("daily-reading").innerHTML =
+      '<a href="' + choice + '">Click here to read today\'s selection</a>';
+  } else {
+    document.getElementById("daily-reading").innerHTML =
+      "Sorry, no readings available.";
+  }
+</script>
