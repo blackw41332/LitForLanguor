@@ -12,4 +12,4 @@ folder: /short-stories/
   Sometimes, it only takes a few words to get the message across. These short stories will pull you into a foreign mind to experience the human condition in its rawest form.
 </p>
 
-{% include list-docx.html folder=page.folder %}
+
