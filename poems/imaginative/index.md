@@ -8,6 +8,4 @@ folder: /imaginative/
 
 "Heard melodies are sweet, but those unheard are sweeter." --- John Keats
 
-Welcome to the Imaginative Poems collection. Choose a poem below:
-
 {% include list-docx.html folder=page.folder %}
