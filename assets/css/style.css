@@ -109,7 +109,7 @@ a:hover {
 9. Intro paragraph styling
 --------------------------------------------------------------*/
 .intro {
-  font-size: 1.5rem;      /* larger welcome text */
+  font-size: 3rem;      /* larger welcome text */
   line-height: 1.4;
   margin-top: 0.5em;
   margin-bottom: 1.5em;
