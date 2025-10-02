@@ -114,3 +114,14 @@ a:hover {
   margin-top: 0.5em;
   margin-bottom: 1.5em;
 }
+
+/*--------------------------------------------------------------
+10. Blockquote styling
+--------------------------------------------------------------*/
+blockquote {
+  font-size: 1.25em;   /* 125% of normal text */
+  line-height: 1.6;
+  margin: 1.5em 0;
+  padding-left: 1em;
+  border-left: 3px solid var(--accent);
+}
