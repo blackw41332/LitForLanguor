@@ -6,6 +6,6 @@ folder: /eldritch-horror/
 
 # Eldritch Horror Stories
 
-Welcome to the Eldritch Horror collection. Choose a story below:
+"The oldest and strongest emotion of mankind is fear, and the oldest and strongest kind of fear is fear of the unknown." --- H.P. Lovecraft
 
 {% include list-docx.html folder=page.folder %}
