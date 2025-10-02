@@ -55,31 +55,5 @@
     btn.textContent = icons[theme];
   });
 </script>
-<!-- reading-of-the-day randomizer -->
-<h2>Reading of the Day</h2>
-<div id="daily-reading"></div>
-
-<script>
-  // Build an array of all .docx file URLs
-  var readings = [
-    {% assign docs = site.static_files | where: "extname", ".docx" %}
-    {% for f in docs %}
-      "{{ f.path | relative_url }}"{% unless forloop.last %},{% endunless %}
-    {% endfor %}
-  ];
-
-  // Pick one at random
-  var choice = readings[Math.floor(Math.random() * readings.length)];
-
-  // Render the link
-  if (choice) {
-    document.getElementById("daily-reading").innerHTML =
-      '<a href="' + choice + '">Click here to read today\'s selection</a>';
-  } else {
-    document.getElementById("daily-reading").innerHTML =
-      "Sorry, no readings available.";
-  }
-</script>
-
 </body>
 </html>
