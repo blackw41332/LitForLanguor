@@ -4,7 +4,7 @@ layout: default
 permalink: /reading-of-the-day/
 ---
 
-<h2>Reading of the Day</h2>
+<h2>Random Reading</h2>
 <div id="daily-reading"></div>
 
 <script>
@@ -17,7 +17,7 @@ permalink: /reading-of-the-day/
   var choice = readings[Math.floor(Math.random() * readings.length)];
   if (choice) {
     document.getElementById("daily-reading").innerHTML =
-      '<a href="' + choice + '">Click here to read today\'s selection</a>';
+      '<a href="' + choice + '">Click here to read the random selection</a>';
   } else {
     document.getElementById("daily-reading").innerHTML =
       "Sorry, no readings available.";
