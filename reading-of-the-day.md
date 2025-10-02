@@ -1,5 +1,5 @@
 ---
-title: Reading of the Day
+title: Random Reading
 layout: default
 permalink: /reading-of-the-day/
 ---
