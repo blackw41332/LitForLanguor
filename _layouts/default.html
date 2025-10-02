@@ -60,9 +60,11 @@
     document.addEventListener("DOMContentLoaded", async () => {
       // 1) Build reads[] from all .docx in your three folders
       const reads = [
-        {% assign docs = site.static_files
-             | where: "extname", ".docx"
-             | where_exp: "f", "f.path contains '/stories/' or f.path contains '/poems/' or f.path contains '/short-stories/'" %}
+        {% assign docs_stories = site.static_files | where: "extname", ".docx" | where_exp: "f", "f.path contains '/stories/'" %}
+{% assign docs_poems   = site.static_files | where: "extname", ".docx" | where_exp: "f", "f.path contains '/poems/'" %}
+{% assign docs_shorts  = site.static_files | where: "extname", ".docx" | where_exp: "f", "f.path contains '/short-stories/'" %}
+{% assign docs = docs_stories | concat: docs_poems | concat: docs_shorts %}
+
         {% for f in docs %}
           {
             "pageUrl": "{{ f.path | replace: '.docx', '.html' | relative_url }}",
