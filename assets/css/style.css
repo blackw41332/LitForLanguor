@@ -74,6 +74,20 @@ a:hover {
   border-bottom: 1px solid var(--border);
   padding: 16px 0;
 }
+.site-header h1 {
+  margin: 0 0 8px;
+  font-size: 24px;
+}
+
+.site-nav a {
+  margin-right: 12px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.site-nav a:hover {
+  color: var(--accent);
+}
 
 /*--------------------------------------------------------------
 5b. Header layout – align title, nav & toggle
@@ -93,22 +107,6 @@ a:hover {
   border: none;
   font-size: 1.2rem;
   cursor: pointer;
-}
-
-
-.site-header h1 {
-  margin: 0 0 8px;
-  font-size: 24px;
-}
-
-.site-nav a {
-  margin-right: 12px;
-  color: var(--muted);
-  font-weight: 500;
-}
-
-.site-nav a:hover {
-  color: var(--accent);
 }
 
 /*--------------------------------------------------------------
