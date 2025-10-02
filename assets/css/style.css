@@ -89,43 +89,6 @@ a:hover {
   color: var(--accent);
 }
 
-/*--------------------------------------------------------------
-5b. Header layout – align title, nav & toggle
---------------------------------------------------------------*/
-.site-header .container {
-  display: flex;
-  align-items: center;    /* vertically center h1, nav & button */
-}
-
-.site-header h1 {
-  margin: 0;              /* remove that 8px bottom margin */
-}
-
-.theme-toggle {
-  margin-left: auto;      /* push the button to the right edge */
-  background: none;
-  border: none;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
-/*--------------------------------------------------------------
-5c. Absolute positioning for theme toggle
---------------------------------------------------------------*/
-.site-header {
-  position: relative; /* establish a positioning context */
-}
-
-.theme-toggle {
-  position: absolute;
-  top: 1rem;          /* adjust vertical offset */
-  right: 1rem;        /* adjust horizontal offset */
-  background: none;
-  border: none;
-  font-size: 1.2rem;
-  cursor: pointer;
-  padding: 0;         /* no extra padding */
-}
 
 /*--------------------------------------------------------------
 6. Main content
@@ -202,4 +165,19 @@ blockquote {
   height: 2px;
   background-color: #8c939b;            /* dark grey */
   margin-top: 0.5em;
+}
+
+/*--------------------------------------------------------------
+12. Theme-toggle fixed in top-right corner
+--------------------------------------------------------------*/
+#theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 1;      /* avoid vertical mis‐alignment */
 }
