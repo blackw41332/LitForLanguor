@@ -181,3 +181,33 @@ blockquote {
   cursor: pointer;
   line-height: 1;      /* avoid vertical mis‐alignment */
 }
+
+/*--------------------------------------------------------------
+13. Daily Reading section
+--------------------------------------------------------------*/
+.daily-reading {
+  background: var(--border);
+  padding: 1.5em;
+  margin: 2em 0;
+  border-radius: 4px;
+}
+
+.daily-reading h1 {
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+#daily-content p {
+  margin: 0.75em 0;
+}
+
+#daily-link {
+  color: var(--accent);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+#daily-link:hover {
+  text-decoration: underline;
+}
+
