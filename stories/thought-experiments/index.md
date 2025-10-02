@@ -8,4 +8,4 @@ folder: /thought-experiments/
 
 > "Men are disturbed not by things, but by the views which they take of things" --- Epictetus
 
-{% include list-docx.html folder=page.folder %}
+{% include list-docx.html folder="/stories/thought-experiments/" %}
