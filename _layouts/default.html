@@ -35,16 +35,26 @@
   <script>
   const btn = document.getElementById('theme-toggle');
   const root = document.documentElement;
-  // On load, apply saved theme, or leave default (light)
-  const saved = localStorage.getItem('theme');
-  if (saved) root.setAttribute('data-theme', saved);
+  const icons = { light: '🌙', dark: '☀️' };
 
+  // Initialize theme & icon
+  let theme = localStorage.getItem('theme');
+  if (!theme) {
+    // default to system preference
+    theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  root.setAttribute('data-theme', theme);
+  btn.textContent = icons[theme];
+
+  // Toggle on click
   btn.addEventListener('click', () => {
-    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    root.setAttribute('data-theme', next);
-    localStorage.setItem('theme', next);
+    theme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    btn.textContent = icons[theme];
   });
 </script>
+
 </body>
 </html>
 
