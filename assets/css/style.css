@@ -110,6 +110,24 @@ a:hover {
 }
 
 /*--------------------------------------------------------------
+5c. Absolute positioning for theme toggle
+--------------------------------------------------------------*/
+.site-header {
+  position: relative; /* establish a positioning context */
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 1rem;          /* adjust vertical offset */
+  right: 1rem;        /* adjust horizontal offset */
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0;         /* no extra padding */
+}
+
+/*--------------------------------------------------------------
 6. Main content
 --------------------------------------------------------------*/
 .content {
