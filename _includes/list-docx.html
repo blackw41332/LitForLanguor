@@ -1,12 +1,11 @@
 <ul class="story-list">
-{%- assign docs = site.static_files | where: "extname", ".docx" -%}
-{%- for f in docs -%}
-  {%- if f.path contains include.folder -%}
-    {%- assign base   = f.name | split: "." | first -%}
-    {%- assign pretty = base
-         | replace: "_s", "’s"
-         | replace: "_",  " " -%}
-    <li><a href="{{ f.path | relative_url }}">{{ pretty }}</a></li>
-  {%- endif -%}
-{%- endfor -%}
+  {% for f in site.static_files %}
+    {% if f.extname == ".docx" %}
+      {% if f.path contains include.folder %}
+        {% assign base   = f.name | split: "." | first %}
+        {% assign pretty = base | replace: "_s", "’s" | replace: "_", " " %}
+        <li><a href="{{ f.path | relative_url }}">{{ pretty }}</a></li>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
 </ul>
