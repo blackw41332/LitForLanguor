@@ -6,6 +6,6 @@ folder: /philosophical/
 
 # Philosophical Poems
 
-Welcome to the Philosophical Poems collection. Choose a poem below:
+"Poetry is an echo, asking a shadow to dance." --- Carl Sandburg
 
 {% include list-docx.html folder=page.folder %}
