@@ -55,6 +55,22 @@
     btn.textContent = icons[theme];
   });
 </script>
+  <script>
+    // Reading-of-the-Day randomizer
+    document.addEventListener('DOMContentLoaded', () => {
+      const templates = Array.from(
+        document.querySelectorAll('template[data-src]')
+      );
+      if (!templates.length) return;
+      const pick = templates[Math.floor(Math.random() * templates.length)];
+      const container = document.getElementById('daily-content');
+      container.append(...pick.content.cloneNode(true).childNodes);
+      document.getElementById('daily-link')
+        .setAttribute('href', pick.dataset.src);
+    });
+  </script>
+</body>
+</html>
 
 </body>
 </html>
