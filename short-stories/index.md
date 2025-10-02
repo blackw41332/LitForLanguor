@@ -1,7 +1,6 @@
 ---
 title: Short Stories
 layout: default
-folder: /short-stories/
 ---
 
 # Short Stories
