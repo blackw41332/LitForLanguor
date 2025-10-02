@@ -6,6 +6,6 @@ folder: /nature/
 
 # Nature Poems
 
-Welcome to the Nature Poems collection. Choose a poem below:
+"Nature is the source of all true knowledge." --- Leonardo da Vinci
 
 {% include list-docx.html folder=page.folder %}
