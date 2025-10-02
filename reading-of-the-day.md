@@ -1,3 +1,8 @@
+---
+title: Reading of the Day
+layout: default
+---
+
 <h2>Reading of the Day</h2>
 <div id="daily-reading"></div>
 
