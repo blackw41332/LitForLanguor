@@ -1,10 +1,33 @@
-<ul class="story-list">
-{% for f in site.static_files %}
-  {% if f.path contains include.folder and f.extname == '.docx' %}
-    {% assign base   = f.name | split: "." | first %}
-    {% assign pretty = base | replace: "_s", "’s" | replace: "_", " " %}
-    <li><a href="{{ f.path | relative_url }}">{{ pretty }}</a></li>
-  {% endif %}
-{% endfor %}
-</ul>
+{%- comment -%}
+  list-docx.html
+  Expects `folder` param, e.g. folder="/short-stories/"
+{%- endcomment -%}
 
+{%- comment -%}
+  1) Grab every .docx in the site
+{%- endcomment -%}
+{%- assign docs = site.static_files | where: "extname", ".docx" -%}
+
+{%- comment -%}
+  2) Build a Liquid expression that filters by folder path
+     (results in "file.path contains '/short-stories/'")
+{%- endcomment -%}
+{%- assign expr = "file.path contains '" | append: include.folder | append: "'" -%}
+
+{%- comment -%}
+  3) Narrow docs[] to only those whose path matches `folder`
+{%- endcomment -%}
+{%- assign docs = docs | where_exp: "file", expr -%}
+
+<ul class="story-list">
+  {%- for f in docs -%}
+    {%- assign base   = f.name | split: "." | first -%}
+    {%- assign pretty = base
+         | replace: "_s", "’s"
+         | replace: "_",  " " -%}
+
+    <li>
+      <a href="{{ f.path | relative_url }}">{{ pretty }}</a>
+    </li>
+  {%- endfor -%}
+</ul>
