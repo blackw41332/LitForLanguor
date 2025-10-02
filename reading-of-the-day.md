@@ -1,6 +1,7 @@
 ---
 title: Reading of the Day
 layout: default
+permalink: /reading-of-the-day/
 ---
 
 <h2>Reading of the Day</h2>
