@@ -1,7 +1,7 @@
 ---
 title: Random Reading
 layout: default
-permalink: /reading-of-the-day/
+permalink: /random-reading/
 ---
 
 <h2>Random Reading</h2>
